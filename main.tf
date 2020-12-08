@@ -32,7 +32,7 @@ resource "yandex_compute_instance_group" "vms" {
 
     labels = {
       name = var.name
-      env  = var.folder
+      env  = var.env
     }
 
     metadata = {
