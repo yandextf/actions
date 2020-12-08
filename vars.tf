@@ -48,7 +48,7 @@ variable "service_account" {
 }
 
 variable "zones" {
-  type        = type(list)
+  type        = list(string)
   description = "List of zones to attach runners group to"
 }
 
