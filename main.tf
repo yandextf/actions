@@ -37,9 +37,10 @@ resource "yandex_compute_instance_group" "vms" {
 
     metadata = {
       user-data = templatefile("docker-compose.yml", {
-        github_url    = var.github_url
-        github_token  = var.github_token
-        github_labels = var.github_labels
+        container_image = var.docker_image
+        github_url      = var.github_url
+        github_token    = var.github_token
+        github_labels   = var.github_labels
       })
       ssh-keys = var.ssh_key
     }

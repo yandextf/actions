@@ -13,6 +13,10 @@ variable "image" {
   description = "Name of GitHub actions runner VM image"
 }
 
+variable "docker_image" {
+  description = "GitHub actions runner docker image"
+}
+
 variable "ssh_key" {
   type        = string
   description = "SSH key to be placed into a runner instance authorized keys"
