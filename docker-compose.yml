@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  github-actions:
+    image: ${docker_image}
+    container_name: github-actions
+    hostname: $${HOSTNAME}
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      GITHUB_URL: ${github_url}
+      GITHUB_TOKEN: ${github_token}
+      GITHUB_LABELS: ${github_labels}
